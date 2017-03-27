@@ -85,7 +85,6 @@ class Runner {
             // Make a move
             $action = $this->bot->move($gameState);
             if ($this->move($action)){
-                $this->log("Move: $action");
                 $turn++;
             }
 

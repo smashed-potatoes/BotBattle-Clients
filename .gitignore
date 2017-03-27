@@ -1,5 +1,5 @@
 ubuntu-xenial-16.04-cloudimg-console.log
 .vagrant/
 
-src/vendor
-src/api/config.php
+src/php/vendor
+src/php/api/config.php
