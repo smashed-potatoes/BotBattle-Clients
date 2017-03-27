@@ -18,8 +18,8 @@ function getArg(int $index, $default = null) {
 }
 
 if ($_SERVER['argc'] === 1) {
-    echo "Usage:   ". $_SERVER['SCRIPT_FILENAME'] ." <username> [game_id] [difficulty] [bot_class]\n";
-    echo "Example: ". $_SERVER['SCRIPT_FILENAME'] ." Bob null 1 RandomBot\n";
+    echo "Usage:   ". $_SERVER['SCRIPT_FILENAME'] ." <username> [bot_class] [game_id] [difficulty]\n";
+    echo "Example: ". $_SERVER['SCRIPT_FILENAME'] ." Bob RandomBot\n";
     exit(0);
 }
 
@@ -28,9 +28,9 @@ $url        = 'http://10.0.0.10/api/';
 
 // Get the passed settings
 $username   = getArg(1, 'Random');
-$gameId     = getArg(2, null);
-$difficulty = getArg(3, 1);
-$bot        = getArg(4, 'RandomBot');
+$bot        = getArg(2, 'RandomBot');
+$gameId     = getArg(3, null);
+$difficulty = getArg(4, 1);
 
 $gameId = ($gameId !== null) && ($gameId !== "null") ? intval($gameId) : null;
 $bot = "\\BotBattleClient\\Bots\\$bot";

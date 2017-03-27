@@ -38,6 +38,7 @@ class Runner {
             'cookies' => true,
             'exceptions' => false
         ]);
+        $this->log("Using bot: " . $botClass);
         $this->bot = new $botClass();
     }
 
@@ -112,7 +113,6 @@ class Runner {
         }
 
         $player = json_decode($response->getBody(), true);
-        $this->bot->setPlayer($player);
         return true;
     }
 

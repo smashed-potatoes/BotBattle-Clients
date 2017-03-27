@@ -13,11 +13,11 @@ class RandomBot extends Bot {
     */
     public function move(array $state) : int {
         $actions = [
-            Bot::ACTION_NONE => 0,
-            Bot::ACTION_LEFT => 1,
-            Bot::ACTION_RIGHT => 2,
-            Bot::ACTION_UP => 3,
-            Bot::ACTION_DOWN => 4
+            Bot::ACTION_NONE,
+            Bot::ACTION_LEFT,
+            Bot::ACTION_RIGHT,
+            Bot::ACTION_UP,
+            Bot::ACTION_DOWN
         ];
 
         return  $actions[array_rand($actions)];

@@ -14,7 +14,7 @@ abstract class Bot {
     const ACTION_UP = 3;
     const ACTION_DOWN = 4;
 
-    protected $player;
+    protected $playerId;
 
     /**
     * The main bot function, called each turn
@@ -26,6 +26,6 @@ abstract class Bot {
     * Set the player that represents the bot in the game
     */
     public function setPlayer(array $player) {
-        $this->player = $player;
+        $this->playerId = $player['id'];
     }
 }
