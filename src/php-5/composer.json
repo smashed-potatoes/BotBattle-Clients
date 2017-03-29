@@ -1,0 +1,13 @@
+{
+    "name": "smashedtatoes/botbattle-client",
+    "description": "Bot Battle Bot",
+    "require": {
+        "slim/slim": "^3.0",
+        "guzzle/guzzle": "~3.9"
+    },
+    "autoload": {
+        "psr-4" : {
+            "BotBattleClient\\": "lib/"
+        }
+    }
+}
