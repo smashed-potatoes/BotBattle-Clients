@@ -24,7 +24,7 @@ if ($_SERVER['argc'] === 1) {
 }
 
 // The API URL
-$url        = 'http://www.battle.smashedtatoes.com/api/';
+$url        = 'http://10.0.0.10/api/';
 
 // Get the passed settings
 $username   = getArg(1, 'Random');
